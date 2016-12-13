@@ -1,0 +1,13 @@
+//添加类库的路径
+require.config({
+  paths:{
+      'array':"array/array",
+      'json':"json/json"
+}
+})
+//加载类库
+require(['array','json'],function(array,json){
+    array.unique();
+    json.aa();
+    json.bb();
+})
