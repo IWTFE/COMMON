@@ -60,12 +60,12 @@ define(function(){
 		factorial:function(n){
 		    return n > 1 ? n * this.factorial(n-1) : 1;
 		}
-	}
+	};
 	return {
 	   randomStr: Math.randomArr,
 	   randomOne: Math.randomOne,
 	   deRepeat: Math.deRepeat,
 	   combin: Math.combin,
 	   factorial: Math.factorial
-	}
-})
+	};
+});
