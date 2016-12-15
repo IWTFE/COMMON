@@ -1,13 +1,13 @@
 /**
  * Created by zhengwj on 2016/12/13.
  */
-define(function(){
+
 	/**
 	* 返回随机数字数组
 	* @param n 随机位数(默认一位),min 最小随机数(默认0),max 最大随机数(默认9),flag 是否可重复(默认不可重复)
-	* (min max]
+	* [min max)
 	*/
-	var Math = {
+	var _Math = {
 		randomArr: function(n, min, max, flag){
 		  var n = n || 1,
 		  	  min = min || 0,
@@ -28,11 +28,11 @@ define(function(){
 		  return result;
 		},
 		/**
-		* 随机一个数字 (min max]
+		* 随机一个数字 [min max)
 		* @param min 最小数 max 最大数
 		*/
 		randomOne: function(min, max){
-			return Math.floor(Math.random()* max+ min);
+			return Math.floor(Math.random()*(max-min)+min);
 		},
 		/**
 		* 数组里是否存在一个数字
@@ -61,11 +61,10 @@ define(function(){
 		    return n > 1 ? n * this.factorial(n-1) : 1;
 		}
 	}
-	return {
-	   randomStr: Math.randomArr,
-	   randomOne: Math.randomOne,
-	   deRepeat: Math.deRepeat,
-	   combin: Math.combin,
-	   factorial: Math.factorial
+	export default{
+	   randomStr: _Math.randomArr,
+	   randomOne: _Math.randomOne,
+	   deRepeat: _Math.deRepeat,
+	   combin: _Math.combin,
+	   factorial: _Math.factorial
 	}
-})
