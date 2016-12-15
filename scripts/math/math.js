@@ -60,6 +60,7 @@
 		factorial:function(n){
 		    return n > 1 ? n * this.factorial(n-1) : 1;
 		}
+<<<<<<< HEAD
 	}
 	export default{
 	   randomStr: _Math.randomArr,
@@ -68,3 +69,14 @@
 	   combin: _Math.combin,
 	   factorial: _Math.factorial
 	}
+=======
+	};
+	return {
+	   randomStr: Math.randomArr,
+	   randomOne: Math.randomOne,
+	   deRepeat: Math.deRepeat,
+	   combin: Math.combin,
+	   factorial: Math.factorial
+	};
+});
+>>>>>>> bfd1afe9cc96fe137f38bccd0bf2a7b50f598b2e
